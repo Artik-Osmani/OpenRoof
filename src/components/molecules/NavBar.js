@@ -5,7 +5,7 @@ export default function NavBar() {
     return (
         <div className='navBar'>
             <Link to='/'>Ballina</Link>
-            <Link to='/about'>Rreth Nesh</Link>
+            <Link to='/rrethnesh'>Rreth Nesh</Link>
         </div>
     )
 }
