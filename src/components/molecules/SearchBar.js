@@ -6,7 +6,7 @@ export default function SearchBar() {
     return (
         <div className="search-bar">
             <Input placeholder="Kërko për qytet, zonë ose lloj prone..." />
-            <Button text="Kërko" />
+            <Button text="Kërko"/>
         </div>
     );
 }
