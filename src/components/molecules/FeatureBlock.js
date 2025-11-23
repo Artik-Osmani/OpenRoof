@@ -2,7 +2,7 @@ import React from 'react';
 import Icon from '../atoms/Icon';
 import Title from '../atoms/Title';
 import Text from '../atoms/Text';
-import '../organism/FeatureList.css';
+import '../organisms/FeatureList.css';
 
 export default function FeatureBlock({ iconName, title, description }) {
     return (

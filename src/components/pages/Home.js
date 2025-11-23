@@ -1,7 +1,7 @@
 import React from 'react'
-import HomeBanner from "../organism/HomeBanner";
-import FeatureList from "../organism/FeatureList";
-import FeaturedPropertiesSection from "../organism/FeaturedPropertiesSection";
+import HomeBanner from "../organisms/HomeBanner";
+import FeatureList from "../organisms/FeatureList";
+import FeaturedPropertiesSection from "../organisms/FeaturedPropertiesSection";
 import "./Home.css";
 
 export default function Home() {

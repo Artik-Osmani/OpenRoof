@@ -1,5 +1,5 @@
 import React from 'react';
-import '../organism/FeatureList.css';
+import '../organisms/FeatureList.css';
 
 
 

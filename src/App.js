@@ -1,10 +1,10 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from '../src/components/pages/Home';
-import About from '../src/components/pages/About';
-import Header from "../src/components/organism/Header";
-import SignIn from './components/pages/SignIn';
+import Home from './components/pages/Home';
+import About from './components/pages/About';
+import Header from "./components/organisms/Header";
 import logoImage from "../src/assets/Screenshot 2025-11-19 203208.png";
+import LoginPage from './components/pages/LoginPage';
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/About' element={<About />} />
-          <Route path='/SignIn' element={<SignIn />} />
+          <Route path='/LogIn' element={<LoginPage />} />
         </Routes>
       </Router>
     </div>

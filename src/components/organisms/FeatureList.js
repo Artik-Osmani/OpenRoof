@@ -1,6 +1,6 @@
 import React from 'react';
 import FeatureBlock from '../molecules/FeatureBlock';
-import '../organism/FeatureList.css';
+import './FeaturedPropertiesSection';
 
 
 const featureData = [
