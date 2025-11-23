@@ -1,55 +1,235 @@
-.home-banner {
+/* --- HomeBanner Wrapper and Background --- */
+.home-banner-wrapper {
+    position: relative;
     width: 100%;
-    height: 420px;
+    height: 600px;
+    /* Adjust height for the visual scale in the screenshot */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: linear-gradient(90deg,
-            #0A41FF 0%,
-            #0A46E3 50%,
-            #0B4CCB 100%);
     color: white;
-    padding: 0px 20px;
 }
 
-.home-banner h1 {
-    font-size: 48px;
-    font-weight: 600;
+.home-banner-background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.home-banner-overlay {
+    position: relative;
+    z-index: 2;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Dark overlay for contrast */
+.home-banner-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+
+/* --- Text Styles --- */
+.home-banner-title {
+    font-size: 64px;
+    font-weight: 700;
     max-width: 800px;
     margin-bottom: 16px;
+    color: white;
 }
 
-.home-banner p {
+.home-banner-text {
     font-size: 18px;
     opacity: 0.9;
     max-width: 850px;
     margin-bottom: 40px;
+    color: white;
 }
 
-.search-bar {
+/* --- Rent/Sale Segmented Buttons --- */
+.rent-sale-buttons {
     display: flex;
-    align-items: center;
+    margin-bottom: 20px;
     background: white;
     padding: 6px;
-    border-radius: 16px;
-    width: 600px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.segment-button {
+    background: transparent;
+    color: #555;
+    border: none;
+    padding: 8px 25px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.segment-button-active {
+    background: #0A41FF;
+    color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* --- Main Search Form Container (Bar + Advanced Filters) --- */
+.main-search-form-container {
+    width: 100%;
+    max-width: 1100px;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    margin-top: -100px;
+    /* Lift the container over the bottom of the image */
+}
+
+/* Main search form bar */
+.main-search-form {
+    display: flex;
+    align-items: center;
+    padding: 10px 10px 10px 20px;
+    border-radius: 12px;
+}
+
+/* When expanded, remove bottom radius for smooth transition to filters */
+.main-search-form-container.expanded .main-search-form {
+    border-radius: 12px 12px 0 0;
+    border-bottom: 1px solid #eee;
+    /* Light separator line */
+    padding-bottom: 12px;
+}
+
+/* --- SearchFormInput Molecule Styles --- */
+.search-form-input {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-right: 20px;
+}
+
+/* Label for inputs (Type, Location, Keyword) */
+.dropdown-label {
+    font-size: 12px;
+    font-weight: 500;
+    color: #777;
+    margin: 0;
+    line-height: 1;
+}
+
+/* Input and Dropdown Wrappers */
+.search-form-dropdown,
+.search-form-location,
+.search-form-keyword {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-right: 20px;
+    border-right: 1px solid #ddd;
+    min-width: 120px;
+    gap: 4px;
+}
+
+.search-form-keyword {
+    border-right: none;
+    /* No border for the last input field */
+}
+
+.input-wrapper,
+.dropdown-value-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .search-input {
     flex: 1;
     border: none;
-    padding: 16px;
-    border-radius: 12px;
+    padding: 0;
     font-size: 16px;
     outline: none;
-    background: #f5f5f5;
+    background: transparent;
+    color: #333;
 }
 
-.search-button {
-    background: black;
+.dropdown-text {
+    color: #333;
+    font-weight: 600;
+    margin: 0;
+    font-size: 16px;
+}
+
+.dropdown-arrow {
+    width: 16px;
+    height: 16px;
+    color: #999;
+}
+
+.location-icon-compass {
+    width: 20px;
+    height: 20px;
+    color: #0A41FF;
+    stroke-width: 1.5;
+}
+
+/* Advanced Search Link Button */
+.search-advanced-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    gap: 4px;
+    transition: all 0.3s;
+}
+
+.search-advanced-text {
+    font-size: 12px;
+    color: #777;
+    text-decoration: none;
+    margin: 0;
+    line-height: 1;
+}
+
+.search-advanced-icon svg {
+    width: 16px;
+    height: 16px;
+    color: #777;
+    transform: rotate(0deg);
+    transition: transform 0.3s;
+}
+
+.search-advanced-link.link-active .search-advanced-icon svg {
+    transform: rotate(180deg);
+}
+
+/* Final Search Button */
+.search-final-button {
+    background: #0A41FF;
     color: white;
     border: none;
     padding: 14px 28px;
@@ -57,8 +237,248 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
-    border-radius: 12px;
+    border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
     font-weight: 600;
+    white-space: nowrap;
+    transition: background-color 0.2s;
+    height: 50px;
+}
+
+.search-final-button:hover {
+    background: #0035cc;
+}
+
+
+/* --- ADVANCED FILTERS SECTION --- */
+.advanced-filters-section {
+    background: white;
+    width: 100%;
+    padding: 20px 30px 40px;
+    border-radius: 0 0 12px 12px;
+}
+
+.filters-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+/* --- Dropdowns (Bathrooms, Bedrooms, Type) --- */
+.filter-dropdown-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.filter-dropdown-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+.filter-dropdown {
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: white;
+    cursor: pointer;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="%23333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+/* --- Amenities Section --- */
+.amenities-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+    padding-left: 5px;
+}
+
+.amenities-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px 30px;
+}
+
+.recommended-text {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-top: 40px;
+    border-top: 1px solid #eee;
+    padding-top: 30px;
+}
+
+
+/* --- Range Slider Component Styles --- */
+.range-slider-container {
+    padding: 0 5px;
+}
+
+.range-slider-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.range-slider-value {
+    font-size: 16px;
+    font-weight: 700;
+    color: #0A41FF;
+    margin-bottom: 12px;
+}
+
+/* Hide default input styles and apply custom ones */
+.range-slider-input {
+    width: 100%;
+    -webkit-appearance: none;
+    background: transparent;
+    margin: 0;
+    height: 5px;
+}
+
+/* Slider Track Styling (Firefox/Edge) */
+.range-slider-input::-moz-range-track,
+.range-slider-input::-ms-track {
+    width: 100%;
+    height: 5px;
+    background: #e0e0e0;
+    border-radius: 3px;
+    border: none;
+}
+
+/* Slider Track Styling (Webkit/Chrome) */
+.range-slider-input::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, #0A41FF var(--value, 50%), #e0e0e0 var(--value, 50%));
+    /* Dynamic track color */
+    border-radius: 3px;
+}
+
+/* Slider Thumb Styling (Webkit/Chrome) */
+.range-slider-input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: #0A41FF;
+    cursor: pointer;
+    margin-top: -5px;
+    border: 2px solid white;
+    box-shadow: 0 0 0 2px rgba(10, 65, 255, 0.5);
+    /* Blue glow/shadow */
+}
+
+/* Slider Thumb Styling (Firefox) */
+.range-slider-input::-moz-range-thumb {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: #0A41FF;
+    cursor: pointer;
+    border: 2px solid white;
+    box-shadow: 0 0 0 2px rgba(10, 65, 255, 0.5);
+}
+
+/* --- Checkbox Field Component Styles --- */
+.checkbox-field-label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    user-select: none;
+}
+
+.checkbox-field-input {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s;
+}
+
+.checkbox-field-input:checked {
+    background-color: #0A41FF;
+    border-color: #0A41FF;
+}
+
+/* Custom checkmark */
+.checkbox-field-input:checked::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 6px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+
+/* --- RESPONSIVENESS --- */
+@media (max-width: 1024px) {
+    .filters-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .search-form-input {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .search-form-dropdown,
+    .search-form-location,
+    .search-form-keyword {
+        flex: 1 1 45%;
+        /* Allow wrapping */
+        min-width: unset;
+        border-right: none;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-banner-title {
+        font-size: 48px;
+    }
+
+    .main-search-form {
+        flex-direction: column;
+    }
+
+    .search-form-input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .search-final-button {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .amenities-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .filters-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }

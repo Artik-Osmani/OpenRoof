@@ -1,0 +1,48 @@
+/* src/components/molecules/TeamCard.css */
+.team-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px 10px;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-image-wrapper {
+    width: 100%;
+    max-width: 220px;
+    height: 220px;
+    border-radius: 12px;
+    /* Slight rounding on the container */
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.team-member-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    /* Optional: If you want a full circle image, change border-radius to 50% here and in wrapper */
+}
+
+.agent-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin: 5px 0 2px 0;
+}
+
+.agent-role {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}

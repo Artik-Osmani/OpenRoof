@@ -1,0 +1,58 @@
+.search-form-input {
+    /*
+    This flex container holds the dropdown, location input, keyword input,
+    and the 'Search advanced' link. The flex properties are crucial
+    and are defined in HomeBanner.css for layout within the main search bar.
+    */
+    flex: 1;
+    /* Allows it to take up the space between the padding and the final search button */
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    /* Spacing between the form elements */
+    padding-right: 15px;
+}
+
+/* Base style for the generic Input atom when used inside this molecule */
+.search-form-input .search-input {
+    border: none;
+    padding: 0;
+    background: transparent;
+    width: 100%;
+    /* Important for inputs inside a flex item */
+}
+
+/* Style for the 'All' dropdown area */
+.search-form-dropdown {
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    border-right: 1px solid #ddd;
+    white-space: nowrap;
+}
+
+/* Style for the 'Location' input block */
+.search-form-location {
+    flex: 2;
+    /* Gives more width to Location */
+    display: flex;
+    align-items: center;
+    padding-right: 15px;
+    border-right: 1px solid #ddd;
+    min-width: 150px;
+}
+
+/* Style for the 'Keyword' input block */
+.search-form-keyword-input {
+    flex: 2;
+    /* Gives more width to Keyword */
+    padding: 0;
+}
+
+/* Style for 'Search advanced' link block */
+.search-advanced-link {
+    white-space: nowrap;
+    cursor: pointer;
+    padding: 0 10px;
+    border-right: 1px solid #ddd;
+}

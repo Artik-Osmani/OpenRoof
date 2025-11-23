@@ -1,6 +1,5 @@
 import React from 'react';
 import FeatureBlock from '../molecules/FeatureBlock';
-import './FeaturedPropertiesSection';
 
 
 const featureData = [

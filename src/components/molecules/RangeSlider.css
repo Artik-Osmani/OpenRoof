@@ -1,0 +1,72 @@
+/* --- Range Slider Component --- */
+.range-slider-container {
+    padding: 0 5px;
+}
+
+.range-slider-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.range-slider-value {
+    font-size: 16px;
+    font-weight: 700;
+    color: #0A41FF;
+    /* Primary blue color */
+    margin-bottom: 12px;
+}
+
+/* Hide default input styles and apply custom ones */
+.range-slider-input {
+    width: 100%;
+    -webkit-appearance: none;
+    background: transparent;
+    margin: 0;
+    height: 5px;
+}
+
+/* Slider Track Styling (Firefox/Edge) */
+.range-slider-input::-moz-range-track,
+.range-slider-input::-ms-track {
+    width: 100%;
+    height: 5px;
+    background: #e0e0e0;
+    border-radius: 3px;
+    border: none;
+}
+
+/* Slider Track Styling (Webkit/Chrome) */
+.range-slider-input::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, #0A41FF var(--value, 50%), #e0e0e0 var(--value, 50%));
+    /* Dynamic track color */
+    border-radius: 3px;
+}
+
+/* Slider Thumb Styling (Webkit/Chrome) */
+.range-slider-input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: #0A41FF;
+    cursor: pointer;
+    margin-top: -5px;
+    /* Adjust to center vertically on track */
+    border: 2px solid white;
+    box-shadow: 0 0 0 2px #0A41FF;
+}
+
+/* Slider Thumb Styling (Firefox) */
+.range-slider-input::-moz-range-thumb {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: #0A41FF;
+    cursor: pointer;
+    border: 2px solid white;
+    box-shadow: 0 0 0 2px #0A41FF;
+}
