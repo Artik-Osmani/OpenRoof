@@ -6,9 +6,9 @@ import Title from '../atoms/Title';
 import './TestimonialsSection.css'; // New CSS file
 
 // Placeholder image imports (You'll need to create these assets)
-import avatar1 from '../../assets/Screenshot 2025-11-19 203208.png';
-import avatar2 from '../../assets/Screenshot 2025-11-19 203208.png';
-import avatar3 from '../../assets/Screenshot 2025-11-19 203208.png';
+import avatar1 from '../../assets/agent-1.jpg';
+import avatar2 from '../../assets/agent-1.jpg';
+import avatar3 from '../../assets/agent-1.jpg';
 
 const testimonialsData = [
     {

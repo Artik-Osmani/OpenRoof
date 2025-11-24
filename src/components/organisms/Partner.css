@@ -1,0 +1,44 @@
+.partner-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    padding: 80px;
+    border-radius: 32px;
+    overflow: hidden;
+}
+
+.partner-content {
+    max-width: 500px;
+}
+
+.partner-subtitle {
+    color: #2a5eff;
+    font-weight: 600;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.partner-title {
+    font-size: 42px;
+    font-weight: 700;
+    margin: 18px 0;
+}
+
+.partner-text {
+    font-size: 40px;
+    color: #333;
+    font-weight: 500;
+    margin-top: -10px;
+}
+
+.partner-btn {
+    margin-top: 30px;
+    padding: 14px 28px;
+}
+
+.partner-image img {
+    width: 600px;
+    border-radius: 16px;
+    object-fit: cover;
+}

@@ -5,18 +5,18 @@ import FeatureBlock from '../molecules/FeatureBlock';
 const featureData = [
     {
         iconName: 'document',
-        title: 'Kompanitë më të Mira',
-        description: 'Bashkëpunojmë me kompanitë më të besueshme të pasurive të paluajtshme në vend.',
+        title: 'The Best Companies',
+        description: 'We work with the most reliable real estate companies in the country.',
     },
     {
         iconName: 'chart',
-        title: 'Çmime Transparente',
-        description: 'Informacion i saktë dhe transparent për çdo pronë pa tarifa të fshehura.',
+        title: 'Transparent Prices',
+        description: 'Accurate and transparent information on every property with no hidden fees.',
     },
     {
         iconName: 'shield',
-        title: 'Të Verifikuara',
-        description: 'Të gjitha pronat dhe kompanitë janë të verifikuara për sigurinë tuaj.',
+        title: 'Verified',
+        description: 'All properties and companies are verified for your safety.',
     },
 ];
 

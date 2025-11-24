@@ -5,6 +5,7 @@ import About from './components/pages/About';
 import Header from "./components/organisms/Header";
 import logoImage from "../src/assets/Screenshot 2025-11-19 203208.png";
 import LoginPage from './components/pages/LoginPage';
+import BlogPage from './components/pages/Blog';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/About' element={<About />} />
           <Route path='/LogIn' element={<LoginPage />} />
+          <Route path='/Blog' element={<BlogPage />} />
         </Routes>
       </Router>
     </div>
