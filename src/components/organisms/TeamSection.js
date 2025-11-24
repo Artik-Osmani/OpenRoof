@@ -6,11 +6,11 @@ import Title from '../atoms/Title';
 import './TeamSection.css';
 
 // Import the images
-import image1 from '../../assets/Screenshot 2025-11-19 203208.png';
-import image2 from '../../assets/Screenshot 2025-11-19 203208.png';
-import image3 from '../../assets/Screenshot 2025-11-19 203208.png';
-import image4 from '../../assets/Screenshot 2025-11-19 203208.png';
-
+import image1 from '../../assets/agent-1.jpg';
+import image2 from '../../assets/agent-1.jpg';
+import image3 from '../../assets/agent-1.jpg';
+import image4 from '../../assets/agent-1.jpg';
+ 
 const teamMembers = [
     { name: 'Chris Patt', role: 'Staff Administrate', imageSrc: image1, imageAlt: 'Chris Patt - Administrative Staff' },
     { name: 'Esther Howard', role: 'Agjent Kryesor', imageSrc: image2, imageAlt: 'Esther Howard - Main Agent' },

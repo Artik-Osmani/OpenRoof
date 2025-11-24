@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import Home from './components/pages/Home';
 import About from './components/pages/About';
 import Header from "./components/organisms/Header";
@@ -8,7 +8,6 @@ import LoginPage from './components/pages/LoginPage';
 import Blog from './components/pages/Blog';
 import Properties from './components/pages/Properties';
 
-function App() {
   return (
     <div className="App">
       <Router>
@@ -31,6 +30,16 @@ function App() {
         </Routes>
       </Router>
     </div>
+  );
+
+
+function App() {
+  return (
+    <UserProvider>
+      <Router>
+        <AppContent />
+      </Router>
+    </UserProvider>
   );
 }
 

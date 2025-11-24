@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import '../organisms/Header.css'
 
-export default function NavBar() {
+export default function NavBar({ isLoggedIn, onLoginSuccess }) {
     return (
         <div className='navBar'>
             <Link to='/'>Home</Link>
@@ -13,6 +13,7 @@ export default function NavBar() {
                 <i class="fa-regular fa-user"></i>
                 <Link to='/LogIn'>Log In</Link>
             </div>
+
         </div>
     )
 }

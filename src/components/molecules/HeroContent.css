@@ -1,20 +1,22 @@
-/* src/components/molecules/HeroContent.css */
 .hero-content {
     max-width: 900px;
     margin: 0 auto;
+    background-color: black;
+    background: transparent;
 }
 
+
 .hero-title {
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 700;
-    color: #333;
+    color: #2a2626;
     margin-bottom: 20px;
 }
 
 .hero-text {
-    font-size: 18px;
+    font-size: 25px;
     line-height: 1.6;
-    color: #555;
-    max-width: 700px;
+    color: #5d5959;
+    max-width: 870px;
     margin: 0 auto;
 }

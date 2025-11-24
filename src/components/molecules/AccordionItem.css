@@ -1,0 +1,70 @@
+/* src/components/molecules/AccordionItem.css (UPDATED for Bigger Text) */
+.accordion-item {
+    width: 100%;
+    max-width: 1000px;
+    /* Wider item */
+    margin: 0 auto;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.accordion-header {
+    background: none;
+    border: none;
+    width: 100%;
+    padding: 20px 0;
+    /* Increased vertical padding for bigger text */
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.accordion-question {
+    font-size: 20px;
+    /* MADE BIGGER */
+    font-weight: 600;
+    /* Made slightly bolder */
+    color: #333;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.accordion-header:hover .accordion-question {
+    color: #0A41FF;
+}
+
+.accordion-header:hover .chevron-icon {
+    color: #0A41FF;
+}
+
+.chevron-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    color: #555;
+}
+
+.chevron-icon.open {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    padding: 0 0 20px 0;
+    /* Increased bottom padding */
+    overflow: hidden;
+}
+
+.accordion-answer {
+    font-size: 17px;
+    /* MADE BIGGER */
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+    padding-left: 25px;
+    /* Slightly increased indentation */
+}
+
+.accordion-header:focus {
+    outline: none;
+}

@@ -25,7 +25,7 @@
 .home-banner-overlay {
     position: relative;
     z-index: 2;
-    padding: 0px 20px;
+    padding: 50px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -61,6 +61,7 @@
     max-width: 850px;
     margin-bottom: 40px;
     color: white;
+    padding-bottom: 30px;
 }
 
 /* --- Rent/Sale Segmented Buttons --- */
