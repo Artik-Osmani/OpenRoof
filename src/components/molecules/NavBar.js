@@ -6,12 +6,13 @@ export default function NavBar({ isLoggedIn, onLoginSuccess }) {
     return (
         <div className='navBar'>
             <Link to='/'>Home</Link>
-            <Link to='/About'>About Us</Link>
-            <Link to='/Blog'>Blog</Link>
-            <Link to='/Properties'>Properties</Link>
+            <Link to='/about'>About Us</Link>
+            <Link to='/blog'>Blog</Link>
+            <Link to='/properties'>Properties</Link>
+            <Link to='/userdashboard'>User Dashboard</Link>
             <div className='buttonLogIn'>
                 <i class="fa-regular fa-user"></i>
-                <Link to='/LogIn'>Log In</Link>
+                <Link to='/login'>Log In</Link>
             </div>
 
         </div>

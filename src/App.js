@@ -7,6 +7,7 @@ import logoImage from "../src/assets/Screenshot 2025-11-19 203208.png";
 import LoginPage from './components/pages/LoginPage';
 import Blog from './components/pages/Blog';
 import Properties from './components/pages/Properties';
+import UserDashboard from './components/pages/UserDashboard';
 import { UserProvider } from './context/UserContext'; 
 
 function AppContent() {
@@ -27,6 +28,7 @@ function AppContent() {
         <Route path='/blog' element={<Blog />} />
         <Route path='/properties' element={<Properties />} />
         <Route path='/login' element={<LoginPage />} />
+        <Route path='/userdashboard' element={<UserDashboard />} />
       </Routes>
     </div>
   );
