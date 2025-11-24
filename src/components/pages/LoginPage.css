@@ -1,115 +1,168 @@
-/* --- Modal Background --- */
+/* LoginPage.css */
+
+/* Modal background */
 .login-modal {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0,0,0,0.5);
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     z-index: 999;
 }
 
-/* --- White Login Box --- */
+/* Modal content */
 .login-modal-content {
-    width: 900px;
-    height: 550px;
     background: #fff;
-    border-radius: 16px;
+    width: 800px;
+    max-width: 95%;
     display: flex;
+    border-radius: 8px;
     overflow: hidden;
-    position: relative;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    animation: fadeIn 0.2s ease-in-out;
 }
 
-/* Close Button */
-.login-close {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 32px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #444;
+/* Left side image */
+.login-left {
+    flex: 1;
 }
 
-/* --- Left Image --- */
 .login-left img {
-    width: 450px;
+    width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-/* --- Right form area --- */
+/* Right side form */
 .login-right {
     flex: 1;
-    padding: 60px 50px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: visible; /* ensures input fields are visible */
 }
 
-/* Title */
+/* Close button */
+.login-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Form */
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Form heading */
 .login-form h2 {
-    font-size: 32px;
+    margin-bottom: 20px;
+    font-size: 28px;
     font-weight: 600;
-    margin-bottom: 30px;
 }
 
-/* --- Inputs --- */
+/* Labels */
+.login-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #6b6b6b; /* kjo është ngjyra identike me dizajnin */
+    margin-bottom: 5px;
+    margin-left: 5px;
+    text-align: left;
+    display: block;
+}
+
+
+/* Input fields */
 .login-input {
     width: 100%;
-    padding: 15px 20px;
-    border-radius: 25px;
+    padding: 10px 12px;
+    font-size: 14px;
     border: 1px solid #ccc;
-    margin-bottom: 20px;
-    font-size: 15px;
-    transition: 0.2s;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
 }
 
-.login-input:focus {
-    border-color: #0063f7;
-}
-
-/* --- Login button --- */
+/* Buttons */
 .login-button {
-    width: 100%;
-    background: #0063f7;
-    padding: 15px;
-    border-radius: 25px;
-    color: white;
-    font-size: 16px;
-    margin-top: 10px;
-    cursor: pointer;
+    padding: 10px 15px;
+    background: #1664ff;
+    color: #fff;
     border: none;
-    transition: 0.2s;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
 }
 
 .login-button:hover {
-    background: #004ecc;
+    background: #0e4fcc;
 }
 
-/* --- Social buttons --- */
+/* Forgot password link */
+.login-forgot {
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.login-forgot a {
+    text-decoration: none;
+    font-size: 12px;
+    color: #1664ff;
+}
+
+.login-forgot a:hover {
+    text-decoration: underline;
+}
+
+/* Register text */
+.login-register {
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.login-register span {
+    color: #1664ff;
+    cursor: pointer;
+}
+
+/* Social login buttons */
 .login-socials {
-    margin-top: 25px;
     display: flex;
-    gap: 15px;
+    gap: 10px;
+    margin-top: 15px;
 }
 
 .login-socials .login-button {
     flex: 1;
-    background: white;
-    color: black;
-    border: 1px solid #ddd;
+    background: #f1f1f1;
+    color: #000;
 }
 
 .login-socials .login-button:hover {
-    background: #f2f2f2;
+    background: #e0e0e0;
 }
 
-/* Animation */
-@keyframes fadeIn {
-    from { opacity: 0; transform: scale(0.95); }
-    to { opacity: 1; transform: scale(1); }
+/* Responsive */
+@media (max-width: 768px) {
+    .login-modal-content {
+        flex-direction: column;
+    }
+
+    .login-left, .login-right {
+        width: 100%;
+    }
+
+    .login-left img {
+        height: 200px;
+    }
 }

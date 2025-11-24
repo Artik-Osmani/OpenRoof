@@ -5,6 +5,8 @@ import About from './components/pages/About';
 import Header from "./components/organisms/Header";
 import logoImage from "../src/assets/Screenshot 2025-11-19 203208.png";
 import LoginPage from './components/pages/LoginPage';
+import Blog from './components/pages/Blog';
+import Properties from './components/pages/Properties';
 
 function App() {
   return (
@@ -14,11 +16,17 @@ function App() {
           src={logoImage}
           alt="Company Logo"
           homeUrl="/"
+          aboutUrl="/about"
+          blogUrl='/blog'
+          propertiesUrl="/properties"
+          logInUrl='/logIn'
         />
 
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/About' element={<About />} />
+          <Route path='/Blog' element={<Blog />} />
+          <Route path='/Properties' element={<Properties />} />
           <Route path='/LogIn' element={<LoginPage />} />
         </Routes>
       </Router>

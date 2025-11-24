@@ -1,7 +1,7 @@
 import React from 'react';
-import LoginForm from '../../molecules/login/LoginForm';
+import RegisterForm from '../../molecules/login/RegisterForm';
 
-export default function LoginModal({ open, onClose, onSubmit, onGoogle, onFacebook, onRegisterClick }) {
+export default function RegisterModal({ open, onClose, onSubmit, onLoginClick }) {
     if (!open) return null;
 
     return (
@@ -14,11 +14,9 @@ export default function LoginModal({ open, onClose, onSubmit, onGoogle, onFacebo
                 </div>
 
                 <div className="login-right">
-                    <LoginForm
+                    <RegisterForm
                         onSubmit={onSubmit}
-                        onGoogle={onGoogle}
-                        onFacebook={onFacebook}
-                        onRegisterClick={onRegisterClick}
+                        onLoginClick={onLoginClick}
                     />
                 </div>
             </div>
