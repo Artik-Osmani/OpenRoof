@@ -1,0 +1,105 @@
+.message-card {
+  background: white;
+  border-left: 4px solid #007bff;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.message-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.message-card--unread {
+  background-color: #f0f7ff;
+  border-left-color: #28a745;
+}
+
+.message-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.message-card__sender {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+}
+
+.message-card__date {
+  font-size: 12px;
+  color: #6c757d;
+}
+
+.message-card__subject {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #495057;
+}
+
+.message-card__content {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 4px;
+  margin: 15px 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.message-card__footer {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.message-card__btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.message-card__btn--reply {
+  background-color: #007bff;
+  color: white;
+}
+
+.message-card__btn--reply:hover {
+  background-color: #0056b3;
+}
+
+.message-card__btn--delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+.message-card__btn--delete:hover {
+  background-color: #c82333;
+}
+
+@media (max-width: 768px) {
+  .message-card {
+    padding: 15px;
+  }
+
+  .message-card__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .message-card__content {
+    max-height: 150px;
+  }
+}
