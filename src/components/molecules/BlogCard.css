@@ -1,0 +1,82 @@
+/* src/components/molecules/BlogCard.css */
+.blog-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    border: 1px solid rgb(219, 216, 216);
+    align-items: center;
+    /* Ensures cards align nicely in the grid */
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.blog-image-wrapper {
+    width: 100%;
+    height: 220px;
+    /* Fixed height for visual uniformity */
+    overflow: hidden;
+}
+
+.blog-article-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    display: block;
+    /* Overrides the existing atom-image styles if needed */
+}
+
+.blog-card:hover .blog-article-image {
+    transform: scale(1.05);
+    /* Subtle zoom on hover */
+}
+
+.blog-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blog-meta {
+    display: flex;
+    font-size: 13px;
+    margin-bottom: 8px;
+    align-items: center;
+}
+
+.blog-date {
+    color: #0A41FF;
+    font-weight: 500;
+    margin: 0;
+}
+
+.blog-category {
+    color: #777;
+    margin: 0 0 0 5px;
+}
+
+.blog-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    line-height: 1.4;
+    margin-bottom: 12px;
+    /* Reuses Title component but needs margin/size defined here */
+}
+
+.blog-author {
+    margin-top: 10px;
+}
+
+.author-name {
+    font-size: 14px;
+    color: #999;
+    margin: 0;
+}

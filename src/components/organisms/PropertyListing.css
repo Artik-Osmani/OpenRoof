@@ -1,0 +1,29 @@
+.property-listing-section {
+    padding: 60px 0;
+    /* Increased max-width to allow for wider cards and gaps */
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.property-listing-main-title {
+    /* Made bigger, as requested */
+    font-size: 52px;
+    font-weight: 700;
+    /* Changed color to the requested blue */
+    color: #3674fd;
+
+    margin-bottom: 50px;
+    /* Adjusted spacing for the larger title */
+    padding-left: 20px;
+}
+
+.property-card-grid {
+    display: grid;
+    /* Adjusted to fit 3 columns of 400px with a 30px gap */
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    /* Space between cards */
+    justify-content: center;
+    padding: 0 20px;
+    /* Horizontal padding */
+}
