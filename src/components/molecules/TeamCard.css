@@ -9,6 +9,7 @@
     background-color: #fff;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
+    border: 1px solid #b6b6b6;
 }
 
 .team-card:hover {
@@ -37,7 +38,7 @@
 .agent-name {
     font-size: 18px;
     font-weight: 600;
-    color: #333;
+    color: #0A41FF;
     margin: 5px 0 2px 0;
 }
 

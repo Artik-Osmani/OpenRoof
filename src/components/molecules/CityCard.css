@@ -1,0 +1,71 @@
+.city-card {
+    width: 260px;
+    /* MATCHES screenshot */
+    height: 365px;
+    /* Matches screenshot ratio */
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+
+    /* Shadow identical to screenshot */
+    box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.18);
+
+    transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+/* Hover lift effect */
+.city-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0px 22px 55px rgba(0, 0, 0, 0.22);
+}
+
+/* Background image */
+.city-card-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.28s ease;
+}
+
+.city-card:hover .city-card-image {
+    transform: scale(1.05);
+}
+
+/* --- OVERLAY BOTTOM BOX --- */
+.city-card-overlay {
+    width: 90%;
+    height: 95px;
+    background: #ffffff;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    border-radius: 18px;
+    /* Rounded box same as screenshot */
+    padding: 16px 20px;
+    text-align: center;
+    /* EXACT same as screenshot */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    box-shadow: 0px 10px 22px rgba(0, 0, 0, 0.06);
+}
+
+/* Top “321 Property” text */
+.city-card-count {
+    font-size: 15px;
+    font-weight: 500;
+    color: #535353;
+    margin-bottom: -10px;
+}
+
+/* Bottom city name */
+.city-card-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a1a;
+}

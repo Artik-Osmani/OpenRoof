@@ -21,7 +21,7 @@ const featureData = [
 ];
 
 export default function FeatureList() {
-    return (
+    return (    
         <section className="feature-list-wrapper">
             <div className="feature-grid">
                 {featureData.map((feature, index) => (

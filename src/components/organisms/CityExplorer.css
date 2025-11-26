@@ -1,0 +1,46 @@
+/* --- SECTION WRAPPER --- */
+.city-explorer-section {
+    padding-top: 50px;
+    padding-bottom: 80px;
+    text-align: center;
+    width: 100%;
+}
+
+/* --- HEADER --- */
+.city-explorer-header {
+    margin-bottom: 60px;
+}
+
+.city-explorer-subtitle {
+    color: #3674fd;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+}
+
+.city-explorer-title {
+    font-size: 42px;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+/* --- GRID --- */
+.city-cards-grid {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    /* EXACT spacing between cards */
+    flex-wrap: wrap;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.city-explorer-description {
+    font-size: 26px;
+    color: #6b7280;
+    /* light gray */
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
